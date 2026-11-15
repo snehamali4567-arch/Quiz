@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+        <header class="header">
+            <div class="logo">Q<span>!</span></div>
+            <div>
+                <h1>Quiz Master</h1>
+                <p>Challenge your knowledge</p>
+            </div>
+        </header>
+
+        <main>
+            <section id="start-screen" class="screen start-screen">
+                <div class="quiz-icon">?</div>
+                <p class="tag">WELCOME TO THE QUIZ</p>
+                <h2>Ready to test<br>your knowledge?</h2>
+                <p class="description">
+                    Answer questions, earn points and discover
+                    how much you know!
+                </p>
+
+                <div class="features">
+                    <div>📝 <strong>10</strong><br><small>Questions</small></div>
+                    <div>⏱️ <strong>Timed</strong><br><small>Challenge</small></div>
+                    <div>🏆 <strong>Score</strong><br><small>Results</small></div>
+                </div>
+
+                <button id="start-btn" class="primary-btn">
+                    Start Quiz →
+                </button>
+            </section>
+
+            <section id="quiz-screen" class="screen hidden">
+                <div class="quiz-top">
+                    <span id="question-type" class="tag">SINGLE SELECT</span>
+                    <span id="question-count">Question 1 of 10</span>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progress-bar"></div>
+                </div>
+
+                <div class="question-info">
+                    <span id="category">General Knowledge</span>
+                    <span id="points">10 points</span>
+                </div>
+
+                <h2 id="question-text">Question goes here</h2>
+                <p id="question-hint" class="hint"></p>
+
+                <div id="answer-area" class="answer-area"></div>
+
+                <p id="feedback" class="feedback" aria-live="polite"></p>
+
+                <div class="quiz-footer">
+                    <span>Score: <strong id="current-score">0</strong></span>
+                    <button id="next-btn" class="primary-btn">
+                        Check Answer →
+                    </button>
+                </div>
+            </section>
+
+            <section id="result-screen" class="screen hidden">
+                <div class="result-icon">🏆</div>
+                <p class="tag">QUIZ COMPLETED</p>
+                <h2 id="result-title">Amazing work!</h2>
+                <p id="result-message">Here is your result.</p>
+
+                <div class="result-card">
+                    <span>Your Score</span>
+                    <h2 id="final-score">0 / 100</h2>
+                    <div class="progress-track">
+                        <div id="result-progress"></div>
+                    </div>
+                    <p id="percentage">0%</p>
+                </div>
+
+                <div class="result-stats">
+                    <div>
+                        <h3 id="correct-count">0</h3>
+                        <small>Correct</small>
+                    </div>
+                    <div>
+                        <h3 id="wrong-count">0</h3>
+                        <small>Incorrect</small>
+                    </div>
+                    <div>
+                        <h3 id="accuracy">0%</h3>
+                        <small>Accuracy</small>
+                    </div>
+                </div>
+
+                <button id="restart-btn" class="primary-btn">
+                    Play Again ↻
+                </button>
+            </section>
+        </main>
+
+        <footer>
+            <p>QUIZ MASTER <span>•</span> LEARN. PLAY. ACHIEVE.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
